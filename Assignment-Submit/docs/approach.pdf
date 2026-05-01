@@ -1,0 +1,109 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 2236 >>
+stream
+BT
+/F1 11 Tf
+50 760 Td
+14 TL
+/F1 18 Tf
+(Alemeno Marker Scanner - Approach) Tj
+T*
+/F1 11 Tf
+() Tj
+T*
+(Marker choice) Tj
+T*
+(The app uses the provided Marker 1. It is a square black border with a single filled) Tj
+T*
+(black finder block near the top-left corner. The remaining interior is mostly empty,) Tj
+T*
+(which leaves room for encoded content and makes the marker easy to distinguish from) Tj
+T*
+(ordinary square objects.) Tj
+T*
+() Tj
+T*
+(Camera flow) Tj
+T*
+(The React Native app renders a live back-camera preview with a 1:1 capture ratio. On) Tj
+T*
+(supported Android devices it selects a square picture size between 2000x2000 and) Tj
+T*
+(3000x3000 pixels, preferring the size closest to 2500x2500. The scan loop captures up to) Tj
+T*
+(60 frames and stops once 20 valid marker crops are produced.) Tj
+T*
+() Tj
+T*
+(Detection) Tj
+T*
+(Each JPEG frame is decoded in JavaScript, thresholded for true black pixels, and scanned) Tj
+T*
+(for the largest square-like connected component. The detector extracts the four extreme) Tj
+T*
+(corners of that component, validates that all four outer edges are continuous, and) Tj
+T*
+(perspective-warps the candidate into a 300x300 image.) Tj
+T*
+() Tj
+T*
+(Orientation correction) Tj
+T*
+(After warping, the detector measures four corner finder zones. The crop is rotated in) Tj
+T*
+(90-degree steps until the filled finder block is in the top-left location. The final) Tj
+T*
+(image is encoded as JPEG and displayed exactly at 300x300 pixels.) Tj
+T*
+() Tj
+T*
+(False-positive rejection) Tj
+T*
+(Validation checks the four black border bands, the expected top-left finder block, the) Tj
+T*
+(absence of finder blocks in the other corners, low central black density, and the red) Tj
+T*
+(error mark used in the supplied incorrect samples. The included test runner verifies) Tj
+T*
+(that the three correct Marker 1 images are accepted and the four incorrect Marker 1) Tj
+T*
+(images are rejected.) Tj
+T*
+() Tj
+T*
+(Performance) Tj
+T*
+(Candidate detection runs on a downsampled frame for speed. Only the accepted square) Tj
+T*
+(candidate is warped at 300x300 resolution, keeping per-frame work small enough for the) Tj
+T*
+(assignment target of a sub-3000 ms scan-to-result path on a typical Android device.) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2599
+%%EOF

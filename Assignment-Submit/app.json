@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Alemeno Marker Scanner",
+    "slug": "alemeno-marker-scanner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#f7f7f2"
+    },
+    "android": {
+      "package": "com.assignment.alemenomarkerscanner",
+      "permissions": [
+        "android.permission.CAMERA"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#f7f7f2"
+      }
+    },
+    "plugins": [
+      "expo-camera"
+    ]
+  }
+}
